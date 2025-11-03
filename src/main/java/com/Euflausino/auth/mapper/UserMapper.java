@@ -18,6 +18,7 @@ public class UserMapper {
 
     public static UserResponseDTO mapToDTO(User user) {
         return new UserResponseDTO(
+                user.getId(),
                 user.getUsername(),
                 user.getEmail()
         );

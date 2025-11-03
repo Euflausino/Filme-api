@@ -15,8 +15,8 @@ import jakarta.persistence.Table;
 public class Filme {
 		
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	@GeneratedValue(strategy = GenerationType.UUID)
+	private String id;
 	
 	private String titulo;
 	
@@ -40,11 +40,11 @@ public class Filme {
 		this.diretor = diretor;
 	}
 
-	public Long getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
