@@ -74,4 +74,10 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.FORBIDDEN).body(new ResponseError(ex.getMessage(), HttpStatus.FORBIDDEN.value()));
     }
 
+    @ExceptionHandler(ConstraintViolationException.class)
+    public ResponseEntity<ResponseError> constraintViolationException(HttpClientErrorException.Forbidden ex){
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new ResponseError(ex.getMessage(), HttpStatus.BAD_REQUEST.value()));
+    }
+
+
 }

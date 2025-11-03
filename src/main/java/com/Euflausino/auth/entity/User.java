@@ -19,6 +19,8 @@ public class User implements UserDetails {
 
     private String username;
     private String password;
+
+    @Column(unique = true)
     private String email;
 
     public User(String username, String password, String email) {
