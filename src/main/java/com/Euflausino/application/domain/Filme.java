@@ -5,7 +5,7 @@ import java.util.Objects;
 
 public class Filme {
 
-	private Long id;
+	private String id;
 	
 	private String titulo;
 	
@@ -21,7 +21,7 @@ public class Filme {
 		
 	}
 
-	public Filme(Long id,String titulo,  LocalDate dataLancamento, Integer nota, String genero, String diretor) {
+	public Filme(String id,String titulo,  LocalDate dataLancamento, Integer nota, String genero, String diretor) {
 		this.id = id;
         this.titulo = titulo;
 		this.dataLancamento = dataLancamento;
@@ -30,11 +30,11 @@ public class Filme {
 		this.diretor = diretor;
 	}
 
-	public Long getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 

@@ -42,7 +42,7 @@ public class JpaFilmeImpl implements IBuscarFilmePorNotaOutput, IBuscarPorDataOu
     }
 
     @Override
-    public Filme findById(Long id) {
+    public Filme findById(String id) {
         JpaFilmeEntity filmeEntity = filmeRepository.findById(id).orElse(null);
         return FilmeOutputMapper.toEntity(filmeEntity);
     }
@@ -54,7 +54,7 @@ public class JpaFilmeImpl implements IBuscarFilmePorNotaOutput, IBuscarPorDataOu
     }
 
     @Override
-    public void deleteById(Long id) {
+    public void deleteById(String  id) {
         filmeRepository.deleteById(id);
     }
 

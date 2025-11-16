@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.Euflausino.application.domain.Filme;
 
-public interface FilmeRepository extends JpaRepository<JpaFilmeEntity, Long>{
+public interface FilmeRepository extends JpaRepository<JpaFilmeEntity, String>{
 	
 	List<JpaFilmeEntity> findByTituloContainingIgnoreCase(String nome);
 	List<JpaFilmeEntity> findByDiretorContainingIgnoreCase(String diretor);

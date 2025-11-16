@@ -13,8 +13,8 @@ import java.util.List;
 @Table(name = "users")
 public class JpaUserEntity implements UserDetails {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private String id;
 
 
     private String username;
@@ -32,11 +32,11 @@ public class JpaUserEntity implements UserDetails {
     public JpaUserEntity() {
     }
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 

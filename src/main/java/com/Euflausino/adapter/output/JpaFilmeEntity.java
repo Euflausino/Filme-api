@@ -9,8 +9,8 @@ import java.util.Objects;
 @Table
 public class JpaFilmeEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private String id;
 
     private String titulo;
 
@@ -34,11 +34,11 @@ public class JpaFilmeEntity {
         this.diretor = diretor;
     }
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 

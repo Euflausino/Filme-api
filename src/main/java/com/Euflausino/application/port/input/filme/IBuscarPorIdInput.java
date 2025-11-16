@@ -3,5 +3,5 @@ package com.Euflausino.application.port.input.filme;
 import com.Euflausino.application.domain.Filme;
 
 public interface IBuscarPorIdInput {
-    Filme buscarPorId(Long id);
+    Filme buscarPorId(String id);
 }

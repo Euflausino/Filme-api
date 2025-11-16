@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 public record FilmeResponseDTO (
 		
-		Long id,
+		String id,
 		
 		String titulo,
 		

@@ -44,7 +44,7 @@ public class FilmeUsecase implements ICadastrarFilmeInput,IAtualizarFilmeInput, 
 	}
 
     @Override
-	public void deletarFilme(Long id) {
+	public void deletarFilme(String id) {
 		validarFilme(id);
         deletarFilmeIdOutput.deleteById(id);
 	}
@@ -56,7 +56,7 @@ public class FilmeUsecase implements ICadastrarFilmeInput,IAtualizarFilmeInput, 
 	}
 
     @Override
-	public Filme buscarPorId(Long id){
+	public Filme buscarPorId(String id){
         return validarFilme(id);
 	}
 
@@ -81,7 +81,7 @@ public class FilmeUsecase implements ICadastrarFilmeInput,IAtualizarFilmeInput, 
 	}
 
     @Override
-    public Filme atualizarFilme(Long id, Filme filmeAtualizado) {
+    public Filme atualizarFilme(String id, Filme filmeAtualizado) {
         Filme filme = validarFilme(id);
         if (filmeAtualizado.getTitulo() != null) {filme.setTitulo(filmeAtualizado.getTitulo());}
         if(filmeAtualizado.getDataLancamento() != null){filme.setDataLancamento(filmeAtualizado.getDataLancamento());}
@@ -91,7 +91,7 @@ public class FilmeUsecase implements ICadastrarFilmeInput,IAtualizarFilmeInput, 
         return filme;
     }
 
-    private Filme validarFilme(Long id) throws FilmeNaoEncontradoException {
+    private Filme validarFilme(String id) throws FilmeNaoEncontradoException {
         if(buscarFilmePorIdOutput.findById(id) != null) {
             return buscarFilmePorIdOutput.findById(id);
         }

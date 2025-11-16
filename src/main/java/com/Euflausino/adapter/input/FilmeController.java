@@ -72,14 +72,14 @@ public class FilmeController {
 	}
 	
 	@PutMapping(value="/atualizar/{id}")
-	public ResponseEntity<FilmeResponseDTO> atualizarFilme(@PathVariable Long id, @RequestBody @Valid AtualizarFilmeDTO filmeAtualizado){
+	public ResponseEntity<FilmeResponseDTO> atualizarFilme(@PathVariable String id, @RequestBody @Valid AtualizarFilmeDTO filmeAtualizado){
         Filme filmeAtt = FilmeMapper.filmeAtt(filmeAtualizado);
 			return ResponseEntity.ok().body(FilmeMapper.dtoResponse(atualizarFilmeInput.atualizarFilme(id, filmeAtt)));
 		
 	}
 	
 	@DeleteMapping(value="/delete/{id}")
-	public ResponseEntity<Void> deletarFilme(@PathVariable Long id) {
+	public ResponseEntity<Void> deletarFilme(@PathVariable String id) {
 		
 		deletarFilmeInput.deletarFilme(id);
         return ResponseEntity.noContent().build();
@@ -92,8 +92,8 @@ public class FilmeController {
 			return ResponseEntity.ok().body(FilmeMapper.toResponsePageDTO(buscarPorDiretorInput.buscarPorDiretor(diretor)));
 	}
 	
-	@GetMapping(value="/{id}")
-	public ResponseEntity<FilmeResponseDTO> buscarPorId(@PathVariable Long id){
+	@GetMapping(value="/buscar-por-id")
+	public ResponseEntity<FilmeResponseDTO> buscarPorId(@RequestParam String id){
 		 return  ResponseEntity.ok().body(FilmeMapper.dtoResponse(buscarPorIdInput.buscarPorId(id)));
 	}
 	

@@ -4,5 +4,5 @@ import com.Euflausino.adapter.input.dto.AtualizarFilmeDTO;
 import com.Euflausino.application.domain.Filme;
 
 public interface IAtualizarFilmeInput {
-    Filme atualizarFilme(Long id, Filme filmeAtualizado);
+    Filme atualizarFilme(String id, Filme filmeAtualizado);
 }

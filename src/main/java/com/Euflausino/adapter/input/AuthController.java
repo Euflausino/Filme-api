@@ -48,7 +48,8 @@ public class AuthController {
     @PostMapping("/cadastro")
     public ResponseEntity<UserResponseDTO> cadastro(@Valid @RequestBody UserCadastroDTO user) {
         User userMapped = UserMapper.mapToEntity(user);
-        return ResponseEntity.status(HttpStatus.CREATED).body(UserMapper.mapToDTO(cadastrarUserInput.cadastrarUsuario(userMapped)));
+        User userSaved = cadastrarUserInput.cadastrarUsuario(userMapped);
+        return ResponseEntity.status(HttpStatus.CREATED).body(UserMapper.mapToDTO(userSaved));
     }
 
 }
