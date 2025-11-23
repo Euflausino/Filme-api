@@ -1,6 +1,6 @@
 package com.Euflausino.config;
 
-import com.Euflausino.application.port.output.filme.*;
+import com.Euflausino.application.port.output.*;
 import com.Euflausino.application.usecase.FilmeUsecase;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

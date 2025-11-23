@@ -1,7 +1,7 @@
 package com.Euflausino.adapter.output.mapper;
 
-import com.Euflausino.adapter.output.JpaUserEntity;
-import com.Euflausino.application.domain.User;
+import com.Euflausino.infra.security.repository.JpaUserEntity;
+import com.Euflausino.infra.security.entity.User;
 
 import java.util.List;
 

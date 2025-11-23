@@ -6,7 +6,7 @@ import java.time.LocalDate;
 import com.Euflausino.adapter.input.dto.AtualizarFilmeDTO;
 import com.Euflausino.adapter.input.dto.mapper.FilmeMapper;
 import com.Euflausino.application.domain.Filme;
-import com.Euflausino.application.port.input.filme.*;
+import com.Euflausino.application.port.input.*;
 import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;

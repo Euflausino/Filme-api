@@ -2,7 +2,7 @@ package com.Euflausino.adapter.output;
 
 import com.Euflausino.adapter.output.mapper.FilmeOutputMapper;
 import com.Euflausino.application.domain.Filme;
-import com.Euflausino.application.port.output.filme.*;
+import com.Euflausino.application.port.output.*;
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalDate;

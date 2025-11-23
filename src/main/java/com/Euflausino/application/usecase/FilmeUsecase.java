@@ -6,8 +6,8 @@ import java.util.List;
 import com.Euflausino.application.domain.exception.filme.FilmeNaoEncontradoException;
 
 import com.Euflausino.application.domain.Filme;
-import com.Euflausino.application.port.input.filme.*;
-import com.Euflausino.application.port.output.filme.*;
+import com.Euflausino.application.port.input.*;
+import com.Euflausino.application.port.output.*;
 
 public class FilmeUsecase implements ICadastrarFilmeInput,IAtualizarFilmeInput, IBuscarPorDataInput, IBuscarPorDiretorInput, IBuscarPorGeneroInput, IBuscarPorIdInput, IBuscarPorNotaInput,IBuscarPorTituloInput, IDeletarFilmeInput, IListarFilmesInput {
 	

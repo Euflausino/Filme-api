@@ -1,5 +1,6 @@
 package com.Euflausino.adapter.output;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
@@ -14,6 +15,7 @@ public class JpaFilmeEntity {
 
     private String titulo;
 
+    @JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDate dataLancamento;
 
     private Integer nota;

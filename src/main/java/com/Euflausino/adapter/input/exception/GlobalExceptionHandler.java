@@ -1,5 +1,6 @@
 package com.Euflausino.adapter.input.exception;
 
+import com.Euflausino.adapter.input.dto.ResponseError;
 import com.Euflausino.application.domain.exception.filme.FilmeNaoEncontradoException;
 import com.auth0.jwt.exceptions.JWTCreationException;
 import com.auth0.jwt.exceptions.JWTVerificationException;

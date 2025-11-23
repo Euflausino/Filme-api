@@ -4,14 +4,10 @@ import java.time.LocalDate;
 import java.util.Arrays;
 
 import com.Euflausino.adapter.output.JpaFilmeEntity;
-import com.Euflausino.adapter.output.JpaUserEntity;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
-import com.Euflausino.adapter.input.dto.FilmeCadastroDTO;
-import com.Euflausino.adapter.input.dto.mapper.FilmeMapper;
-import com.Euflausino.application.domain.Filme;
 import com.Euflausino.adapter.output.FilmeRepository;
 
 @Configuration // executa a aplicaçao em contexto especifico, conforme no app.properts
